@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h1>Lottery Game</h1>
+  <h2>Select three numbers from 1 -50!</h2>
+  <div class="">
+    <input id = "num1" type="text" min="1" max="50" name="" value="">
+    <input id = "num2" type="text" name="" value="">
+    <input id = "num3" type="text" name="" value="">
+    <button type="button" name="button">Try Your Luck!</button>
+    <span></span>
+  </div>
+
+  <script type="text/javascript">
+  // Create a simple web application that uses the fs and http modules.
+  // Use http to create the server and fs to read your html file.
+  // Include vanilla ES6 js in a script tag at the bottom of your html file.
+  // Create a simple lottery game - user can select three numbers out of 50 -
+  // if any of their numbers match the random num they win
+
+  document.addEventListener('click', function() {
+  let num1 = document.getElementById('num1').value;
+  let num2 =  document.getElementById('num2').value;
+  let num3 = document.getElementById('num3').value;
+  let mathRandom = Math.floor(Math.random() * 50) + 1;
+  console.log(num1);
+
+
+
+    if (num1 == mathRandom || num2 == mathRandom || num3 == mathRandom){
+      $("span").text("Congrats, you win!");
+    } else{
+      $("span").text("Sorry, you lost. Try again!")
+    }
+
+})
+
+
+  </script>
+</body>
+</html>
